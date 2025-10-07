@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介绍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 登录 -->
+        <div class="signin" id="signin">
+            <form action="" id="form">
+                <!-- 用户名 -->
+                 <div class="username">
+                    <p><label for="username">用户名:</label></p>
+                    <input type="text" id="username" name="username" placeholder="请输入用户名">
+                 </div>
+                 
+                 <!-- 密码 -->
+                  <div class="pwd">
+                    <p><label for="password">密码:</label></p>
+                    <input type="password" id="password" name="password" placeholder="请输入密码">
+                  </div>
+                
+                <!-- 登录按钮 -->
+                 <div class="submit">
+                    <button type="submit">登录</button>
+                </div>
+            </form>
+        </div>
+        <!-- 自我介绍 -->
+        <div class="intro" id="intro">
+            <!-- 导航栏 -->
+            <div class="nav">
+                <ul>
+                    <div>W E L C O M E !</div>
+                    <li><a href="#introduction">自我介绍</a></li>
+                    <li><a href="#hobby">兴趣爱好</a></li>
+                    <li><a href="#photo">照片墙</a></li>
+                    <li><a href="#contact">联系方式</a></li>
+                </ul>
+            </div>
+            <!-- 介绍 -->
+            <div class="introduction">
+                <!-- 自我介绍 -->
+                <div class="content" id="introduction">
+                    <h1>Self-Introduction</h1>
+                    <div class="content-main" >
+                        <div class="profile">
+                            <img src="images/picture.jpg" alt="头像">
+                            <p class="name">肖金津</p>
+                            <p class="info">大一新生，软件工程专业。来自广东珠海，一个没有美食也没啥风景的海滨城市。虽然是广东人，但喜欢吃辣，四川菜适应良好。</p>
+                        </div>
+                        <div class="assess">
+                            <h2>描述一下</h2>
+                            <p>其实计算机方面几乎是零基础（暑假自学了一点C语言）， 选专业时凭借着初高中一丢丢的编程经历,义无反顾地选择了顺应时代潮流 的软件工程（实则是不喜欢物理）。自认为拥有比较优秀的专注能力，能比较高效的学习，而且善于在投入的事物中寻找成就感，于是学习能力应该是ok的并且积极性会比较高，尤其是对于喜欢的事物。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 兴趣爱好 -->
+                <div class="content" id="hobby">
+                    <h1>Hobbies</h1>
+                    <div class="content-main">
+                        <div class="hobby">
+                            <p class="p">其实没有那么多，但是为了凑九宫格就都放上来了。真的算爱好的应该是排球、听歌。密室、剧本杀、diy这些也偶尔玩玩但不是很厉害，总之跟朋友出去啥都能玩。</p>
+                            <p>虽然爱好不多，但我很乐意去发掘和尝试新的事物。国庆和舍友去体验了攀岩，好玩课也贵T_T，以后有计划去试试徒步等等。</p>
+                        </div>
+                        <div class="display">
+                            <div class="line">
+                                <div class="box1"></div>
+                                <div class="box1"></div>
+                                <div class="box1"></div>
+                            </div>
+                            <div class="line">
+                                <div class="box1"></div>
+                                <div class="box1"></div>
+                                <div class="box1"></div>
+                            </div>
+                            <div class="line b">
+                                <div class="box1"></div>
+                                <div class="box1"></div>
+                                <div class="box1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 照片墙 -->
+                <div class="content" id="photo">
+                    <h1>Photo Wall</h1>
+                    <div class="content-main">
+                        <div class="box2">
+                            <img src="images/21.jpg" alt="photo1">
+                            <span>2025.10.1</span>
+                        </div>
+                        <div class="box2">
+                            <img src="images/23.jpg" alt="photo3">
+                            <span>2025.6.17</span>
+                        </div>
+                        <div class="box2">
+                            <img src="images/22.jpg" alt="photo2">
+                            <span>2025.6.16</span>
+                        </div>
+                        <div class="box2">
+                            <img src="images/26.jpg" alt="photo6">
+                            <span>2024.10.28</span>
+                        </div>
+                        <div class="box2">
+                            <img src="images/25.jpg" alt="photo5">
+                            <span>2024.10.28</span>
+                        </div>
+                        <div class="box2">
+                            <img src="images/27.jpg" alt="photo7">
+                            <span>2024.6.10</span>
+                        </div>
+                        <div class="box2">
+                            <img src="images/24.jpg" alt="photo4">
+                            <span>2024.3.30</span>
+                        </div>
+                    </div>
+                    <button class="btn-left"><</button>
+                    <button class="btn-right">></button>
+                </div>
+                <!-- 联系方式 -->
+                <div class="content" id="contact">
+                    <h1>Contact Information</h1>
+                    <div class="content-main">
+                        <p>QQ：2191131478<br>电话：19180761815</p>
+                        <span>可以通过这两种方式联系我~</span>
+                    </div>
+                </div>
+                <div class="last"></div>
+            </div>
+        </div>
+    </div>
+    <script src="signin.js"></script>
+    <script src="intro.js"></script>
+</body>
+</html>
