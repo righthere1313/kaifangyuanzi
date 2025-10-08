@@ -420,10 +420,23 @@ body {
     /* background-color: #fff; */
     font-size: 20px;
 }
-.messages p{
-    margin-bottom: 10px;
+
+.messages .message-item{
+    margin-bottom: 8px;
+    /* padding-bottom: 10px; */
+}
+
+.messages .message-item p {
+    height: 30px;
     line-height: 30px;
     border-bottom: 1px dashed rgb(151, 138, 118);
+}
+.messages .message-item span {
+    display: block;
+    height: 14px;
+    font-size: 14px;
+    color: #777;
+    text-align: right;
 }
 /* 底部 */
 .intro .introduction .last{

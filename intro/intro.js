@@ -66,9 +66,42 @@ const msgBtn = document.getElementById('msg-button');
 const messages = document.querySelector('.msg-display .messages');
 const msgForm = document.getElementById('msg-form');
 
+// 添加留言
+function addMessage(text) {
+    if (text.trim()) {
+        const timestamp = new Date().toLocaleString(); // 添加时间戳
+        const messageHTML = `
+            <div class="message-item">
+                <p class="message-text">${text}</p>
+                <span class="message-time">${timestamp}</span>
+            </div>
+        `;
+        messages.innerHTML += messageHTML;
+        saveMessages(); // 保存到 localStorage
+    }
+}
+
+
+// 加载已有的留言
+function loadMessages() {
+    const savedMessages = localStorage.getItem('messageBoard');
+    if (savedMessages) {
+        messages.innerHTML = savedMessages;
+    }
+}
+
+// 保存留言
+function saveMessages() {
+    localStorage.setItem('messageBoard', messages.innerHTML);
+}
+
 msgForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const msgText = msgInput.value;
-    messages.innerHTML += `<p>${msgText}</p>`;
-    msgInput.value = ''; 
+    const msgText = msgInput.value.trim();
+    if (msgText) {
+        addMessage(msgText);
+        msgInput.value = ''; 
+    }
 });
+
+document.addEventListener('DOMContentLoaded', loadMessages);
