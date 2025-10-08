@@ -39,6 +39,7 @@
                     <li><a href="#hobby">兴趣爱好</a></li>
                     <li><a href="#photo">照片墙</a></li>
                     <li><a href="#contact">联系方式</a></li>
+                    <li><a href="#message">留言板</a></li>
                 </ul>
             </div>
             <!-- 介绍 -->
@@ -129,9 +130,25 @@
                         <span>可以通过这两种方式联系我~</span>
                     </div>
                 </div>
-                <div class="last"></div>
+                <!-- 留言板 -->
+                <div class="content" id="message">
+                    <h1>Message Board</h1>
+                    <div class="content-main">
+                        <div class="msg">
+                            <form action="" id="msg-form">
+                                <textarea name="message" id="msg-input"  placeholder="请输入留言内容..."></textarea>
+                                <button type="submit" id="msg-button">></button>
+                            </form>
+                        </div>
+                        <div class="msg-display" id="msg-display">
+                            <h2>留言记录</h2>
+                            <div class="messages" id="messages">
+                                <!-- 留言内容将显示在这里 -->
+                            </div>
+                    </div>
             </div>
         </div>
+        <div class="last"></div>
     </div>
     <script src="signin.js"></script>
     <script src="intro.js"></script>

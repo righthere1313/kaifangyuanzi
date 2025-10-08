@@ -59,3 +59,16 @@ btnRight.addEventListener('click', () => {
     box2[i].classList.add('hover-active');
     start();
 });
+
+//留言板
+const msgInput = document.getElementById('msg-input');
+const msgBtn = document.getElementById('msg-button');
+const messages = document.querySelector('.msg-display .messages');
+const msgForm = document.getElementById('msg-form');
+
+msgForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const msgText = msgInput.value;
+    messages.innerHTML += `<p>${msgText}</p>`;
+    msgInput.value = ''; 
+});
