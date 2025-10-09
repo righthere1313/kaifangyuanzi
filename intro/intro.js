@@ -63,6 +63,7 @@ btnRight.addEventListener('click', () => {
 //留言板
 const msgInput = document.getElementById('msg-input');
 const msgBtn = document.getElementById('msg-button');
+const clearBtn = document.getElementById('clear-button');
 const messages = document.querySelector('.msg-display .messages');
 const msgForm = document.getElementById('msg-form');
 
@@ -95,6 +96,11 @@ function saveMessages() {
     localStorage.setItem('messageBoard', messages.innerHTML);
 }
 
+//清空留言记录
+function clearMessages() {
+    messages.innerHTML = '';
+    saveMessages();
+}
 msgForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const msgText = msgInput.value.trim();
@@ -104,4 +110,6 @@ msgForm.addEventListener('submit', (e) => {
     }
 });
 
+clearBtn.addEventListener('click', clearMessages);
+//加载留言
 document.addEventListener('DOMContentLoaded', loadMessages);
